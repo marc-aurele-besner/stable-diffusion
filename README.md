@@ -19,24 +19,39 @@ this model uses a frozen CLIP ViT-L/14 text encoder to condition the model on te
 With its 860M UNet and 123M text encoder, the model is relatively lightweight and runs on a GPU with at least 10GB VRAM.
 See [this section](#stable-diffusion-v1) below and the [model card](https://huggingface.co/CompVis/stable-diffusion).
 
-  
 ## Requirements
+
 A suitable [conda](https://conda.io/) environment named `ldm` can be created
 and activated with:
 
+### Install Anaconda
+
+```bash
+wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+bash Anaconda3-2022.10-Linux-x86_64.sh
 ```
+
+### Clone this repo
+
+```bash
+wget https://repo.anaconda.com/archive/Anaconda3-2022.10-Linux-x86_64.sh
+bash Anaconda3-2022.10-Linux-x86_64.sh
+```
+
+### Create a coda environment
+
+```bash
 conda env create -f environment.yaml
 conda activate ldm
 ```
 
 You can also update an existing [latent diffusion](https://github.com/CompVis/latent-diffusion) environment by running
 
-```
+```bash
 conda install pytorch torchvision -c pytorch
 pip install transformers==4.19.2 diffusers invisible-watermark
 pip install -e .
 ``` 
-
 
 ## Stable Diffusion v1
 
